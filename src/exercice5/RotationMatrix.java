@@ -15,30 +15,9 @@ public class RotationMatrix {
 			}
 		}
 
-		rotate90ClockwiseInPlace(A);
-
 		afficherMatrix(A);
 	}
 
-	public static void rotate90ClockwiseInPlace(int[][] A) {
-		int N = A.length;
-
-		for (int i = 0; i < N; i++) {
-			for (int j = i + 1; j < N; j++) {
-				int temp = A[i][j];
-				A[i][j] = A[j][i];
-				A[j][i] = temp;
-			}
-		}
-
-		for (int i = 0; i < N; i++) {
-			for (int j = 0; j < N / 2; j++) {
-				int temp = A[i][j];
-				A[i][j] = A[i][N - 1 - j];
-				A[i][N - 1 - j] = temp;
-			}
-		}
-	}
 
 	public static void afficherMatrix(int[][] A) {
 		int N = A.length;
